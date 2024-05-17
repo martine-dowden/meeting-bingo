@@ -41,7 +41,7 @@ const tileOptions = [
   'This meeting could have been an email',
   '"Is ______ on the call?"',
   'Loud echo or feedback',
-  '"That\'s about my pay grade"',
+  '"That\'s above my pay grade"',
   '"That\'s not my job"',
   '"I\'m going to need hazard pay"',
   '"I have a hard stop at ____"',
