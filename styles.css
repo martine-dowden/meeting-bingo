@@ -95,6 +95,7 @@ button {
   border: solid 1px var(--primary);
   padding: .5rem 1rem;
   border-radius: 4px;
+  text-transform: capitalize;
 }
 button.secondary {
   background: none;

@@ -1,4 +1,5 @@
 const themeKey = 'meeting-bingo-theme'
+const themeButton = document.getElementById('theme')
 let activeTheme
 const tileTemplate = document.getElementById('cell')
 const card = document.getElementById('card')
@@ -91,6 +92,7 @@ function setTheme(newTheme) {
 }
 
 function toggleTheme() {
+  themeButton.innerHTML = `switch to ${activeTheme} theme`
   const newTheme = activeTheme === 'light' ? 'dark' : 'light'
   setTheme(newTheme)
 }
@@ -113,9 +115,10 @@ function clearCard() {
     && window.matchMedia('(prefers-color-scheme: light)').matches
   ) {
     theme = 'light' 
-  } else {
+  } else if (!theme) {
     theme = 'dark'
   }
+  themeButton.innerHTML = `switch to ${theme === 'dark' ? 'light' : 'dark'} theme`
   setTheme(theme)
 
   const year = new Date().getFullYear();
