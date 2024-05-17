@@ -11,6 +11,7 @@ body {
   --background: #2e3844;
   --color: #FEFFFE;
   --border: #3f5572;
+  --link: #b1d4ff;
 }
 
 body.light {
@@ -19,7 +20,10 @@ body.light {
   --background: #FEFFFE;
   --color: #2e3844;
   --border: #e1eaf5;
+  --link: #2a5385;
 }
+
+a:link, a:visited { color: var(--link); }
 
 header {
   display: flex;
