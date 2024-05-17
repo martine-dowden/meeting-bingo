@@ -50,7 +50,8 @@ const tileOptions = [
   'Ceiling camera',
   'I\'ll turn it over to ____ ',
   'Awkward Silence',
-  'Does that make sense?'
+  'Does that make sense?',
+  'Do you/we have the bandwidth?'
 ]
 
 function generateCard() {
