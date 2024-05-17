@@ -45,8 +45,8 @@ function copy() {
     src('./ios/**').pipe(dest('./public/ios')),
     src('./android/**').pipe(dest('./public/android')),
     src('./screenshots/**').pipe(dest('./public/screenshots')),
-    src('./manifest.json').pipe(dest('./public/manifest.json')),
-    src('./favicon.ico').pipe(dest('./public/favicon.ico')),
+    src('./manifest.json').pipe(dest('./public')),
+    src('./favicon.ico').pipe(dest('./public')),
 
   ])
 }
