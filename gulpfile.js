@@ -10,7 +10,7 @@ const date = Date.now();
 
 function handleJs() {
     // place code for your default task here
-    return src('*.js')
+    return src('script.js')
     // The gulp-uglify plugin won't update the filename
     // So use gulp-rename to change the extension
     .pipe(rename({ extname: '-' + date + '.min.js' }))
