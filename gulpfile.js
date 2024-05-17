@@ -10,12 +10,12 @@ const date = Date.now();
 
 function handleJs() {
     // place code for your default task here
-    return src('./scripts/*.js')
+    return src('*.js')
     // The gulp-uglify plugin won't update the filename
     // So use gulp-rename to change the extension
     .pipe(rename({ extname: '-' + date + '.min.js' }))
     .pipe(uglify())
-    .pipe(dest('./public/scripts'));
+    .pipe(dest('./public'));
 }
 
 function handlePages() {
@@ -32,20 +32,21 @@ function handlePages() {
 }
 
 function handleCss() {
-  return src('./css/*.css')
+  return src('*.css')
     .pipe(cleanCSS())
     .pipe(replace(/(@import.*?)\.css'/g, "$1-" + date + ".min.css'"))
     .pipe(rename({ extname: '-' + date +'.min.css' }))
-    .pipe(dest('./public/css'));
+    .pipe(dest('./public/'));
 }
 
 function copy() {
-  return ChannelMergerNode([
-    gulp.src('./img/**').pipe(gulp.dest('./public/img')),
-    gulp.src('./ios/**').pipe(gulp.dest('./public/ios')),
-    gulp.src('./android/**').pipe(gulp.dest('./public/android')),
-    gulp.src('./screenshots/**').pipe(gulp.dest('./public/screenshots')),
-    gulp.src('./manifest.json').pipe(gulp.dest('./public/manifest.json')),
+  return merge([
+    src('./img/**').pipe(dest('./public/img')),
+    src('./ios/**').pipe(dest('./public/ios')),
+    src('./android/**').pipe(dest('./public/android')),
+    src('./screenshots/**').pipe(dest('./public/screenshots')),
+    src('./manifest.json').pipe(dest('./public/manifest.json')),
+    src('./favicon.ico').pipe(dest('./public/favicon.ico')),
 
   ])
 }

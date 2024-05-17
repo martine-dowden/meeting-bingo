@@ -95,6 +95,13 @@ function toggleTheme() {
   setTheme(newTheme)
 }
 
+function clearCard() {
+  Array.from(card.querySelectorAll('input')).forEach((input, i) => {
+    if (i === 12) { return }
+    input.checked = false;
+  })
+}
+
 (() => {
   'use strict'
   generateCard()
@@ -110,5 +117,9 @@ function toggleTheme() {
     theme = 'dark'
   }
   setTheme(theme)
+
+  const year = new Date().getFullYear();
+  const yearContainer = document.getElementById('year')
+  yearContainer.innerText = year === 2024 ? year : `2024 - ${year}`
 
 })()

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
-    "start": "npx live-server --port=8081",
-    "build": "gulp"
+    "start": "npx live-server --port=8080",
+    "build": "npx gulp"
   },
   "author": "Martine Dowden",
   "devDependencies": {

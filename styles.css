@@ -30,7 +30,7 @@ header {
 body {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: min-content auto min-content;
+  grid-template-rows: min-content auto min-content min-content;
   background: var(--background);
   color: var(--color);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -79,6 +79,11 @@ input[type="checkbox"] {
 
 .actions {
   margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
 }
 
 button {
