@@ -51,7 +51,9 @@ const tileOptions = [
   'I\'ll turn it over to ____ ',
   'Awkward Silence',
   'Does that make sense?',
-  'Do you/we have the bandwidth?'
+  'Do you/we have the bandwidth?',
+  'Wrong lever Kronk!',
+  'Movie / pop culture reference or quote',
 ]
 
 function generateCard() {
