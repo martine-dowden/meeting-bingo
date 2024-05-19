@@ -1,13 +1,13 @@
 {
-  "name": "meeting-bingo",
+  "name": "ma-meeting-bingo",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
     "start": "npx live-server --port=8080",
     "build": "npx gulp"
   },
-  "author": "Martine Dowden",
-  "repository": "https://github.com/martine-dowden/meeting-bingo",
+  "author": "beaudetious",
+  "repository": "https://github.com/beaudetious/ma-meeting-bingo",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",

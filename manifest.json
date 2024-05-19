@@ -1,11 +1,11 @@
 {
-  "name": "Meeting Bingo",
-  "shortName": "meeting-bingo",
+  "name": "MA Meeting Bingo",
+  "shortName": "ma-meeting-bingo",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#b1d4ff",
   "theme_color": "#3f5572",
-  "description": "a bingo game to play while in meetings",
+  "description": "a fun bingo game to play while in meetings",
   "orientation": "portrait",
   "icons": [
     {
