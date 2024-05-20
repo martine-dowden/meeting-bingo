@@ -23,7 +23,7 @@ const tileOptions = [
   'Heart emoji is shared',
   'Mispronounced name',
   'Cooking during the meeting',
-  'Day 1 share',
+  'Day one share',
   'Kids in the background',
   'Clapping emoji is shared',
   'Thumbs up emoji is shared',
@@ -45,7 +45,7 @@ const tileOptions = [
   'Relapsed/absent member returned',
   'Member achieves new step',
   'Member celebrating milestone',
-  'Repeating common 12 step slogan',
+  'Using a common 12 step slogan',
   'Oops, cross talk',
   'Ceiling or floor camera',
   'Thank you for your service',
@@ -54,6 +54,7 @@ const tileOptions = [
   'Newcomer shares',
   'We see you',
   'Pop culture reference or quote',
+  'Burning desire shared',
 ]
 
 function generateCard() {
