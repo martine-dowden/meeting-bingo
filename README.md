@@ -1,6 +1,6 @@
 # Meeting Bingo
 
-Meeting Bingo is a fun little game you can play with your team during your boring meetings.
+MA Meeting Bingo is a fun little game you can play with your fellowship during your meeting.
 
 ## Setup
 
@@ -23,4 +23,4 @@ npm run build
 
 Pull requests are welcome.
 
-If you want to add options in the list of possible items to show up on the card, we will be happy to merge them but please keep it safe for work.
+If you want to add options in the list of possible items to show up on the card, we will be happy to merge them but please keep it safe for MA meetings.
