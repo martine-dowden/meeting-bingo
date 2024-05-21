@@ -1,6 +1,6 @@
 # Meeting Bingo
 
-MA Meeting Bingo is a fun little game you can play with your fellowship during your meeting.
+MA Meeting Bingo is a fun little game you can play with your fellowship during your meeting. This project was forked from [martine-dowden/meeting-bingo](https://github.com/martine-dowden/meeting-bingo). Thanks Martine!
 
 ## Setup
 
