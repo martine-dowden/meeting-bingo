@@ -58,6 +58,7 @@ const tileOptions = [
   'You stay for the parking lot',
   'Numbers are shared',
   'A newcomer is attending',
+  'I am grateful for this group'
 ]
 
 function generateCard() {
