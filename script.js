@@ -58,7 +58,12 @@ const tileOptions = [
   'You stay for the parking lot',
   'Numbers are shared',
   'A newcomer is attending',
-  'I am grateful for this group'
+  'Member share did not just assert a meme',
+  'Baby-boom grateful I don\'t drive motorcycles',
+  'GenX grateful if I drive motorcycles',
+  'Instantly sound-asleep from member share',
+  'Member hopes they\'ll take good care of me',
+  'I am superbly grateful for this group'
 ]
 
 function generateCard() {
