@@ -27,6 +27,7 @@ const tileOptions = [
   'Kids in the background',
   'Inappropriate tabs in screen share',
   'Facebook tab in screen share',
+  'LinkedIn tab in screen share',
   'Sorry, was multitasking',
   'Can you repeat the question?',
   'Sorry, was talking on mute',
@@ -54,6 +55,10 @@ const tileOptions = [
   'Do you/we have the bandwidth?',
   'Wrong lever Kronk!',
   'Movie / pop culture reference or quote',
+  'Demo malfunction',
+  'Vocal filler (uhm, hmm, ah, hum...)',
+  'Too loud',
+  'Let me interject here',
 ]
 
 function generateCard() {
