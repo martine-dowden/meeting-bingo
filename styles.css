@@ -56,6 +56,15 @@ main {
 
 input[type="checkbox"] {
   appearance: none;
+  width: 0;
+  height: 0;
+}
+
+select {
+  padding: 9px;
+  background: none;
+  color: var(--color);
+  border-radius: 4px;
 }
 
 .cell {
@@ -64,6 +73,15 @@ input[type="checkbox"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0;
+  font-size: calc(((max(100vw, 50rem) / 5) - 2rem));
+  /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+  font-size: calc(12px + (1rem - 12px) * ((100vw - 200px) / (50rem - 200px)) );;
+}
+
+.cell span {
+  columns: 1;
+  hyphens: auto;
 }
 
 .cell:hover, .cell:focus-within {

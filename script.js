@@ -4,7 +4,10 @@ let activeTheme
 const tileTemplate = document.getElementById('cell')
 const card = document.getElementById('card')
 const body = document.querySelector('body')
-const tileOptions = [
+
+const flavorSelect = document.getElementById('flavorSelect')
+
+const onlineMeetingOptions = [
   'You are muted',
   'Virtual background',
   'Dog barking',
@@ -60,17 +63,121 @@ const tileOptions = [
   'Too loud',
   'Let me interject here',
 ]
+const corporateTermsOptions = [
+  '110%',
+  'Above & Beyond',
+  'Above my Pay Grade',
+  'Accountable',
+  'Action Item',
+  'Agile',
+  'AI',
+  'Alignment',
+  'ASAP',
+  'Back Burner',
+  'Bandwidth',
+  'Big Picture',
+  'Blockchain',
+  'Boil the Ocean',
+  'Bottleneck',
+  'Brain Dump',
+  'Brainstorm',
+  'Buy-in',
+  'Catch 22',
+  'Churn',
+  'Circle Back',
+  'Circle the Wagons',
+  'Client Centric',
+  'Company Culture',
+  'Core Competencies',
+  'Data Driven',
+  'Deep Dive',
+  'Deliverable',
+  'Disrupt',
+  'Diversify',
+  'Double Down',
+  'Dumpster Fire',
+  'Drill Down',
+  'ETA',
+  'In House',
+  'Iterate',
+  '🦆 in a Row',
+  'Flesh Out',
+  'Future Proof',
+  'Game Changer',
+  'Goal Post',
+  'Growth',
+  'Hard Stop',
+  'In the Weeds',
+  'Integrate',
+  'Innovate',
+  'KPI',
+  'Leverage',
+  'Loop-in',
+  'Low Hanging Fruit',
+  'Market Strategy',
+  'Monetize',
+  'Move the Needle',
+  'Mission Critical',
+  'New Normal',
+  'Next Gen',
+  'Offshore',
+  'On My/Your Plate',
+  'Optics',
+  'Out of Pocket',
+  'Outside the Box',
+  'Pain Point',
+  'Paradigm Shift',
+  'Pie in the Sky',
+  'Piggyback',
+  'Pivot',
+  'Prototype',
+  'POC',
+  'Put a Pin In It',
+  'Resonate',
+  'Resource',
+  'RFP',
+  'ROI',
+  'Rubber Meets the Road',
+  'Scalability',
+  'Scrum',
+  'Silo',
+  'Sky is the Limit',
+  'SOP',
+  'Sunk Cost',
+  'Synergy',
+  'Table That',
+  'Take it Offline',
+  'Team Player',
+  'Tech Debt',
+  'Timeline',
+  'Transition',
+  'Touch Base',
+  'Touch Point',
+  'Turn Key',
+  'Unpack',
+  'Up the Flagpole',
+  'Viability',
+  'Wheel House',
+  'Win Win',
+  'Work Smarter, Not Harder '
+
+]
+const flavorValues = {
+  corporateTerms: corporateTermsOptions,
+  onlineMeeting: onlineMeetingOptions,
+}
 
 function generateCard() {
   'use strict'
+  const options = flavorValues[flavorSelect.value]
   const tiles = Array(25)
   let i = 0;
   while (i < 25) {
     let option;
     if (i === 12) { option = 'FREE' }
     while(!option) {
-      const index = getRandomInt(0, tileOptions.length - 1)
-      const tile = tileOptions[index]
+      const index = getRandomInt(0, options.length - 1)
+      const tile = options[index]
       if (!tiles.includes(tile)) { option = tile }
     }
     tiles[i] = option
@@ -136,5 +243,7 @@ function clearCard() {
   const year = new Date().getFullYear();
   const yearContainer = document.getElementById('year')
   yearContainer.innerText = year === 2024 ? year : `2024 - ${year}`
+
+  flavorSelect.addEventListener('change', generateCard)
 
 })()
