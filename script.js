@@ -95,7 +95,6 @@ const corporateTermsOptions = [
   'Disrupt',
   'Diversify',
   'Double Down',
-  'Dumpster Fire',
   'Drill Down',
   'ETA',
   'In House',
@@ -188,10 +187,31 @@ function generateCard() {
   tiles.forEach((option, i) => {
     const cell = tileTemplate.content.cloneNode(true)
     const label = cell.querySelector('label')
-    if (i === 12) { label.classList.add('free')}
-    const text = document.createTextNode(option)
+    const input = cell.querySelector('input')
     const span = cell.querySelector('span')
-    span.appendChild(text)
+    let text = ''
+    if (i === 12) { 
+      label.classList.add('free')
+      const img = document.createElement('img')
+      switch (flavorSelect.value) {
+        case 'corporateTerms': 
+          img.src = './img/dumpster-fire.svg' 
+          img.alt = 'Smiling pink dumpster fire'
+          break;
+        case 'onlineMeeting':
+          img.src = activeTheme === 'light' ? './img/online-meeting-light.svg': './img/online-meeting.svg'
+          img.alt = 'Chat bubble with a camera icon in it'
+          break;
+        default: text = document.createTextNode('Free')
+      }
+      if (img.src) {
+        label.appendChild(img)
+        input.setAttribute('aria-label', 'Free')
+      }
+    } else {
+      text = document.createTextNode(option)
+    }
+    if (text) span.appendChild(text)
     card.appendChild(cell)
   })
 }

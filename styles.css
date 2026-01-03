@@ -16,7 +16,7 @@ body {
 
 body.light {
   --primary: #b1d4ff;
-  --accent: #f2c4d7;
+  --accent: #fbddea;
   --background: #FEFFFE;
   --color: #2e3844;
   --border: #e1eaf5;
@@ -82,6 +82,12 @@ select {
 .cell span {
   columns: 1;
   hyphens: auto;
+}
+
+.cell img {
+  max-height: 50px;
+  max-width: 50px;
+  object-fit: cover;
 }
 
 .cell:hover, .cell:focus-within {

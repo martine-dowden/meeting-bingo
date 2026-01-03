@@ -24,3 +24,7 @@ npm run build
 Pull requests are welcome.
 
 If you want to add options in the list of possible items to show up on the card, we will be happy to merge them but please keep it safe for work.
+
+_____
+
+See [LICENSE.txt](LICENSE.txt) for licensing and permissions.
